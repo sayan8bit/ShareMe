@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>File Binary Converter</h1>
+    <button class="button" id="upload-btn">Upload & Convert</button>
+    <button class="button" id="retrieve-btn">Retrieve & Recreate</button>
+
+    <div class="modal" id="upload-modal">
+      <div class="modal-header">Upload and Convert File</div>
+      <input type="file" id="file-input" />
+      <button class="button" id="convert-to-binary-btn">
+        Convert to Binary
+      </button>
+      <textarea class="output" id="binary-output" readonly></textarea>
+      <button class="button" id="copy-binary-btn">Copy Binary</button>
+      <button class="button" id="close-upload-modal">Close</button>
+    </div>
+
+    <div class="modal" id="retrieve-modal">
+      <div class="modal-header">Retrieve and Recreate File</div>
+      <textarea
+        class="textarea"
+        id="binary-input"
+        placeholder="Paste binary digits here..."
+      ></textarea>
+      <button class="button" id="paste-binary-btn">Paste Binary</button>
+      <button class="button" id="convert-to-file-btn">Convert to File</button>
+      <a class="button hidden" id="download-file-btn">Download File</a>
+      <button class="button" id="close-retrieve-modal">Close</button>
+    </div>
+
+    <!-- Loader -->
+    <div class="loading" id="loading">
+      <div class="loader"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
