@@ -36,14 +36,16 @@ convertToBinaryBtn.addEventListener("click", () => {
   const reader = new FileReader();
   reader.onload = () => {
     const arrayBuffer = reader.result;
+    // Remove padStart(8, '0') to reduce the length of binary digits
     const binary = Array.from(new Uint8Array(arrayBuffer))
-      .map((byte) => byte.toString(2).padStart(8, "0"))
+      .map((byte) => byte.toString(2))  // Convert each byte to binary without leading zeros
       .join(" ");
     binaryOutput.value = `${file.type}::${binary}`;
     loading.classList.remove("active"); // Hide loader
   };
   reader.readAsArrayBuffer(file);
 });
+
 
 copyBinaryBtn.addEventListener("click", () => {
   const binaryText = binaryOutput.value;
