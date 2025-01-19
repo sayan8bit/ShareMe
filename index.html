@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>File Binary Converter</h1>
+   <h1>File Base64 Encoder</h1>
     <button class="button" id="upload-btn">Upload & Convert</button>
     <button class="button" id="retrieve-btn">Retrieve & Recreate</button>
 
     <div class="modal" id="upload-modal">
       <div class="modal-header">Upload and Convert File</div>
       <input type="file" id="file-input" />
-      <button class="button" id="convert-to-binary-btn">
-        Convert to Binary
+      <button class="button" id="convert-to-base64-btn">
+        Convert to Base64
       </button>
-      <textarea class="output" id="binary-output" readonly></textarea>
-      <button class="button" id="copy-binary-btn">Copy Binary</button>
+      <textarea class="output" id="base64-output" readonly></textarea>
+      <button class="button" id="copy-base64-btn">Copy Base64</button>
       <button class="button" id="close-upload-modal">Close</button>
     </div>
 
@@ -26,10 +26,10 @@
       <div class="modal-header">Retrieve and Recreate File</div>
       <textarea
         class="textarea"
-        id="binary-input"
-        placeholder="Paste binary digits here..."
+        id="base64-input"
+        placeholder="Paste Base64 string here..."
       ></textarea>
-      <button class="button" id="paste-binary-btn">Paste Binary</button>
+      <button class="button" id="paste-base64-btn">Paste Base64</button>
       <button class="button" id="convert-to-file-btn">Convert to File</button>
       <a class="button hidden" id="download-file-btn">Download File</a>
       <button class="button" id="close-retrieve-modal">Close</button>
