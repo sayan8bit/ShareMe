@@ -1,3 +1,13 @@
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+    .then(() => console.log('Service Worker registered'))
+    .catch(error => console.error('Service Worker registration failed:', error));
+}
+
+
+
+
+
 const uploadBtn = document.getElementById("upload-btn");
       const retrieveBtn = document.getElementById("retrieve-btn");
       const uploadModal = document.getElementById("upload-modal");
